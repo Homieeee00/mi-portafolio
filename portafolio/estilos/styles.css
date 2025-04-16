@@ -1,0 +1,405 @@
+/* Estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  /* Encabezado */
+  header.hero {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background: linear-gradient(135deg, #2b7c4d, #34836b); 
+    color: white;
+    height: 80vh; 
+    padding: 0 20px;
+    position: relative;
+  }
+  
+  /* Contenedor de contenido */
+  .hero-content {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; 
+    animation: fadeSlideIn 1s ease-out; 
+    gap: 80px; 
+  }
+  
+  /* Texto dentro del contenedor */
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    max-width: 600px; 
+    opacity: 0; 
+    animation: fadeSlideIn 1s ease-out forwards; 
+    margin-left: 20px; 
+  }
+  
+  /* Título */
+  .hero-text h1 {
+    font-size: 40px; 
+    margin: 0;
+  }
+  
+  /* Párrafos */
+  .hero-text p {
+    font-size: 20px; 
+    margin: 5px 0;
+  }
+  
+  /* Imagen de perfil */
+  .profile-img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px; 
+    object-fit: cover;
+    margin-left: 30px; 
+  }
+  
+  /* Animación de entrada */
+  @keyframes fadeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+
+.tagline {
+    font-size: 22px;
+    margin: 10px 0;
+    font-weight: 400;
+}
+
+/* Lenguajes y Habilidades Técnicas */
+.skills-lenguajes {
+    padding: 60px 20px;
+    background-color: #fff;
+  }
+  
+  .skills-lenguajes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0px; 
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .lenguajes, .habilidades {
+    flex: 1 1 45%; 
+  }
+  
+  .lenguajes h2, .habilidades h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Diseño de las habilidades técnicas (con imágenes) */
+  .habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .skill-card {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .skill-card p {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  .skill-image {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+  }
+  
+  /* Diseño de los íconos de los lenguajes (sin cambios) */
+  .skills-icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 40px;
+  }
+  
+  .icon-card {
+    width: 110px;
+    height: 110px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .icon-card:hover {
+    transform: scale(1.2) rotate(5deg);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+  }
+  
+  .icon-card img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  /* Tooltip estilo animado */
+  .icon-card::after {
+    content: attr(title);
+    position: absolute;
+    top: -35px;
+    background-color: #34836b;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .icon-card:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Animación suave */
+  @keyframes fadeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+    
+  
+/* Proyectos */
+.projects {
+    background: linear-gradient(135deg, #2b7c4d, #34836b);
+    padding: 60px 20px;
+    color: white; 
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #f7f7f7;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project-card h3 {
+    font-size: 24px;
+    margin: 15px 0;
+    color: #167947;
+}
+
+.project-card p {
+    font-size: 16px;
+    color: #167947;
+}
+
+.project-card p {
+    color: #167947; 
+}
+
+
+.view-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #34836b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.view-more:hover {
+    background-color: #2980b9;
+}
+
+/* Feedback */
+.feedback {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Contact */
+.contact {
+    background-color: #ecf0f1;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact button {
+    padding: 15px 30px;
+    background-color: #34836b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.contact button a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact .social-links a {
+    margin: 0 10px;
+    color: #3498db;
+    font-size: 24px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #2b7c4d, #34836b); 
+    color: white;
+}
+
+
+
+/*para el modal*/
+.project-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    overflow: auto; 
+    padding: 20px;
+  }
+  
+  .project-modal .modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh; 
+    overflow-y: auto;
+    position: relative;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .project-modal .modal-img {
+    max-width: 100%;
+    max-height: 300px; 
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+
+  .contact-button {
+    display: inline-block;
+    background-color: #34836b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-button:hover {
+    background-color: #34836b;
+  }
+  
+
+  /*para las redes*/
+  .hero-socials {
+    margin-top: 20px;
+    display: flex;
+    gap: 25px;
+    justify-content: flex-start;
+  }
+  
+  .social-icon {
+    font-size: 32px;
+    color: #fff; /* Blanco para contrastar con verde */
+    background-color: rgba(0, 0, 0, 0.3); /* Fondo semitransparente */
+    padding: 12px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Colores individuales si quieres resaltar aún más */
+  .github:hover {
+    color: #000;
+  }
+  
+  .whatsapp:hover {
+    color: #25D366;
+  }
+  
+  .instagram:hover {
+    color: #E1306C;
+  }
+  
